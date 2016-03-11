@@ -1,0 +1,51 @@
+#header {
+	width: 100%;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+#sitetitle {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 48px;
+	float: left
+}
+.button {
+	background-color: white;
+	font-family: 'Monstserrat', sans-serif;
+	font-size: 20px;
+	height: 35 px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	float: right	
+}
+
+#splasher { 
+	font-family: 'Monstserrat', sans-serif;
+	width: 100%; 
+	height: 100%;
+	background-color: white;
+	text-align: center;
+	position: absolute;
+	padding-right: 50px;
+	opacity: 1;
+}
+.center {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+#map {
+    height:775px;
+    width:74%;
+	float:left;
+ }
+ #sidebar {
+	 height: 600px;
+	 width: 25%;
+	 float: right;
+	 font-family: 'Monstserrat', sans-serif;
+	 font-size: 20px;
+	
+ }
+ 
