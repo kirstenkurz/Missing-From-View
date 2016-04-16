@@ -1,0 +1,50 @@
+
+<html>
+<head> 
+<title>Mt. Shasta Views</title>
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/> 
+ <link rel="stylesheet" href="css/leaflet.instagram.css"/> 
+ <link rel="stylesheet" href="css/style.css"/> 
+ <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'> 
+ </style>
+ </head>
+ <body> 
+ <div id="wrapper">
+	<div id="map"></div>
+	<div id="weather">
+		<h1> CURRENT WEATHER </h1>
+		<img id= "icon" src=this>
+		<div id= "details"></div>
+	</div>
+ </div>
+
+ <script src="js/reqwest.min.js"></script> 
+ <script src="js/leaflet.instagram.js"></script> 
+ <script> 
+var weather = new XMLHttpRequest();
+weather.open("GET", "http://api.openweathermap.org/data/2.5/weather?lat=41.4098713&lon=-122.2299007&APPID=a73124989d403b3ef975891ab3d00aff&units=imperial", false);
+weather.send(null);
+var r = JSON.parse(weather.response);
+
+var imageCode = r.weather[0].icon;
+var imageUrl = "http://openweathermap.org/img/w/" + imageCode +".png";
+document.getElementById("icon").src = imageUrl;
+
+var display = "<h2>Temp: " + r.main.temp +" F</br>Humidity : " + r.main.humidity +"%</br>Wind : " + r.wind.speed +" mph</br></h3>";
+
+document.getElementById("details").innerHTML = display;
+
+
+ 
+ var map = L.map('map').setView([41.4098713, -122.2299007], 15);
+ var at = '256164975.c9600e9.7a9aeb07284e4220bdddeaddcbedee38'; 
+ var url = "https://api.instagram.com/v1/media/search?lat=41.4098713&lng=-122.2299007&distance=5000&access_token="+at; L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={token}', {   attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',   maxZoom: 19,   minZoom: 7, id: 'kirstenkurz.pmi667k6', token: 'pk.eyJ1Ijoia2lyc3Rlbmt1cnoiLCJhIjoiY2lnd2g4ZmdhMHM3d3c5bTUzaGVldzdsMyJ9.fsyf6xgVQAW23HPBuf8glQ' }).addTo(map); L.instagram(url).addTo(map); 
+
+ 
+ </script>
+
+
+
+ </body>
+ </html>
