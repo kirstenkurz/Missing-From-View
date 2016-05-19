@@ -36,7 +36,7 @@ document.getElementById("details").innerHTML = display;
 
 
  
- var map = L.map('map').setView([41.4098713, -122.2299007], 15);
+ var map = L.map('map').setView([41.4098713, -122.2299007], 14);
  var at = '256164975.c9600e9.7a9aeb07284e4220bdddeaddcbedee38'; 
  var url = "https://api.instagram.com/v1/media/search?lat=41.4098713&lng=-122.2299007&distance=5000&access_token="+at; L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={token}', {   attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',   maxZoom: 19,   minZoom: 7, id: 'mapbox.satellite', token: 'pk.eyJ1Ijoia2lyc3Rlbmt1cnoiLCJhIjoiY2lnd2g4ZmdhMHM3d3c5bTUzaGVldzdsMyJ9.fsyf6xgVQAW23HPBuf8glQ' }).addTo(map); L.instagram(url).addTo(map); 
 
