@@ -10,7 +10,7 @@
 
 
 //map
-var map = L.map("map").setView([39.952451, -75.163459], 14);
+var map = L.map("map").setView([39.952451, -75.163459], 12);
 			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={token}', {
 				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 			maxZoom: 18,
