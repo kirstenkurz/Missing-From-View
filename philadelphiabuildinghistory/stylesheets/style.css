@@ -14,7 +14,7 @@ body {
 	float: right;
 }
 #splasher {
-	height: 500px;
+	height: auto;
 	width: 620px;
 	border-radius: 8px;
 	background-color: black;
