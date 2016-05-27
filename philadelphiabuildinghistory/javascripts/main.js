@@ -3,12 +3,14 @@
 //create maps
 var map1 = L.map('map1', {
 	    center: [39.9926, -75.1652],
-	    zoom: 12
+	    zoom: 12,
+	    maxZoom: 12
 	})
 
 var map2 = L.map('map2', {
 	    center: [39.9926, -75.1652],
-	    zoom: 12
+	    zoom: 12,
+	    maxZoom: 12
 	})
 
 
