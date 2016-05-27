@@ -272,7 +272,7 @@ var yearsLeft = {
 
 L.control.layers(yearsLeft).addTo(map1);
  var arrayLength = layers.length;
-var i = 0
+var i = 0;
                     
 
 // set the timer delay function to add layers to map, calling function name in HTML button
